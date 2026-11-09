@@ -6,12 +6,6 @@ Solvoya is a modern and responsive travel website that allows users to explore p
 
 [View Solvoya Website](https://Muhaned-7.github.io/Solvoya/)
 
-## Screenshots
-
-| Home | Destinations | Hotels |
-|------|--------------|--------|
-| ![Home](images/home.png) | ![Destinations](images/destinations.png) | ![Hotels](images/hotels.png) |
-
 ## Features
 
 - Modern and clean user interface.
