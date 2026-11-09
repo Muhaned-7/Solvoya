@@ -10,11 +10,7 @@ Solvoya is a modern and responsive travel website that allows users to explore p
 
 | Home | Destinations | Hotels |
 |------|--------------|--------|
-| ![Home](images/screenshots/home.png) | ![Destinations](images/screenshots/destinations.png) | ![Hotels](images/screenshots/hotels.png) |
-
-**Mobile view:**
-
-![Mobile](images/screenshots/mobile.png)
+| ![Home](images/home.png) | ![Destinations](images/destinations.png) | ![Hotels](images/hotels.png) |
 
 ## Features
 
