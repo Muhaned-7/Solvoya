@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solvoya</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#">
+          <img
+            class="logo"
+            src="images/Solvoya Travel Compass Logo.png"
+            alt="Solvoya"
+          />
+        </a>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+          </ul>
+        </nav>
+        <div class="actions">
+          <div class="search-box">
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search destinations..."
+            />
+          </div>
+          <a href="signin.html" class="signin-btn">Sign In</a>
+          <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="text">
+          <h1>Explore the World<br />With Solvoya</h1>
+          <p>
+            Discover amazing destinations and create<br />
+            memories with our travel solutions.
+          </p>
+        </div>
+      </div>
+      <form class="search-bar" id="hero-search">
+        <div class="search-field">
+          <label for="destination">Where to?</label>
+          <input
+            type="text"
+            id="destination"
+            name="destination"
+            placeholder="Search destinations..."
+            required
+          />
+        </div>
+        <div class="search-field">
+          <label for="checkin">Check in</label>
+          <input type="date" id="checkin" name="checkin" />
+        </div>
+        <div class="search-field">
+          <label for="checkout">Check out</label>
+          <input type="date" id="checkout" name="checkout" />
+        </div>
+        <div class="search-field">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5+ Guests</option>
+          </select>
+        </div>
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+    </section>
+    <section class="destinations">
+      <div class="container">
+        <div class="heading">
+          <div class="text">
+            <h2>Popular Destinations</h2>
+            <p>Discover our most loved destinations around the world</p>
+          </div>
+          <a href="destinations.html" class="view-all">
+            View all <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="cards">
+          <a
+            href="destinations.html"
+            class="card"
+            data-name="Bali"
+            data-country="indonesia"
+            data-season="summer"
+          >
+            <img src="images/destination-01.jpg" alt="Bali" />
+            <div class="card-content">
+              <h3>Bali</h3>
+              <p>Indonesia</p>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+          </a>
+          <a
+            href="destinations.html"
+            class="card"
+            data-name="Paris"
+            data-country="france"
+            data-season="spring"
+          >
+            <img src="images/destination-02.jpg" alt="Paris" />
+            <div class="card-content">
+              <h3>Paris</h3>
+              <p>France</p>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+          </a>
+          <a
+            href="destinations.html"
+            class="card"
+            data-name="Santorini"
+            data-country="greece"
+            data-season="summer"
+          >
+            <img src="images/destination-03.jpg" alt="Santorini" />
+            <div class="card-content">
+              <h3>Santorini</h3>
+              <p>Greece</p>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+          </a>
+          <a
+            href="destinations.html"
+            class="card"
+            data-name="New York"
+            data-country="usa"
+            data-season="autumn"
+          >
+            <img src="images/destination-04.jpg" alt="New York" />
+            <div class="card-content">
+              <h3>New York</h3>
+              <p>USA</p>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="hotels">
+      <div class="container">
+        <div class="heading">
+          <div class="text">
+            <h2>Featured Hotels</h2>
+            <p>Handpicked hotels for your perfect stay</p>
+          </div>
+          <a href="hotels.html" class="view-all">
+            View all <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="cards">
+          <a
+            href="hotels.html"
+            class="card"
+            data-name="The Mulia Bali"
+            data-location="Bali, Indonesia"
+          >
+            <img src="images/featured-hotels-01.jpg" alt="The Mulia Bali" />
+            <div class="card-content">
+              <h3>The Mulia Bali</h3>
+              <p>Bali, Indonesia</p>
+              <div class="card-footer">
+                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                <span class="price"> <strong>$180</strong> / night </span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="hotels.html"
+            class="card"
+            data-name="Hotel de Paris"
+            data-location="Paris, France"
+          >
+            <img src="images/featured-hotels-02.jpg" alt="Hotel de Paris" />
+            <div class="card-content">
+              <h3>Hotel de Paris</h3>
+              <p>Paris, France</p>
+              <div class="card-footer">
+                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                <span class="price"> <strong>$220</strong> / night </span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="hotels.html"
+            class="card"
+            data-name="Canaves Oia Suites"
+            data-location="Santorini, Greece"
+          >
+            <img src="images/featured-hotels-03.jpg" alt="Canaves Oia Suites" />
+            <div class="card-content">
+              <h3>Canaves Oia Suites</h3>
+              <p>Santorini, Greece</p>
+              <div class="card-footer">
+                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                <span class="price"> <strong>$350</strong> / night </span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="hotels.html"
+            class="card"
+            data-name="The Plaza Hotel"
+            data-location="New York, USA"
+          >
+            <img src="images/featured-hotels-04.jpg" alt="The Plaza Hotel" />
+            <div class="card-content">
+              <h3>The Plaza Hotel</h3>
+              <p>New York, USA</p>
+              <div class="card-footer">
+                <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                <span class="price"> <strong>$260</strong> / night </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <h2>Your Next Adventure<br />Awaits</h2>
+        <p>Discover amazing destinations and plan your next trip.</p>
+        <a href="destinations.html" class="btn">Get Started</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="#"
+              ><img src="images/Solvoya Travel Compass Logo.png" alt="Solvoya"
+            /></a>
+            <p>Explore. Relax. Travel.</p>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="hotels.html">Hotels</a></li>
+              <li><a href="favorites.html">Favorites</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2026 Solvoya. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #dbeafe;
+  --secondary-color: #1e2a5e;
+  --text-color: #64748b;
+  --background-color: #f8fafc;
+  --section-padding-top: 50px;
+  --section-padding-bottom: 50px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+.card {
+  background-color: white;
+  display: flex;
+  gap: 60px;
+  width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+.card .image {
+  width: 50%;
+  background-image: url(../images/signin-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.card .image::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -25px;
+  width: 55px;
+  height: 110%;
+  background-color: white;
+  border-radius: 50%;
+}
+.card .image img {
+  width: 200px;
+  margin-top: 20px;
+}
+.card .image h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  margin-left: 30px;
+  margin-top: 60px;
+}
+.card .image h1 span {
+  color: var(--primary-color);
+}
+.card .image p {
+  color: white;
+  font-size: 20px;
+  margin-left: 30px;
+}
+.card .signin > i {
+  font-size: 50px;
+  color: var(--primary-color);
+  transform: translate(350px, 30px) rotate(-40deg);
+}
+.card .signin h2 {
+  color: var(--secondary-color);
+  font-size: 35px;
+  margin-top: 20px;
+}
+.card .signin p {
+  color: var(--secondary-color);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.card .signin .input-group {
+  position: relative;
+  margin-top: 20px;
+}
+.card .signin .input-group input {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  border: 1px solid #777;
+  outline: none;
+  padding-left: 60px;
+}
+.card .signin .input-group input::placeholder {
+  font-size: 18px;
+}
+.card .signin .input-group i {
+  position: absolute;
+  font-size: 25px;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+}
+.card .signin .input-group .password-eye {
+  left: auto;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-color);
+}
+.card .signin .form-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.card .signin .form-options .remember-me input{
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+.card .signin .form-options a {
+  color: var(--primary-color);
+}
+.card .signin form > button {
+  width: 100%;
+  padding: 15px 0;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.card .signin button i {
+  margin-left: 10px;
+}
+.card .signin .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.card .signin .divider:before,
+.card .signin .divider:after {
+  content: "";
+  background-color: #333;
+  width: 50px;
+  height: 1px;
+  flex: 1;
+}
+.card .signin .divider span {
+  color: var(--text-color);
+  padding: 0 10px;
+}
+.card .signin .social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.card .signin .social-buttons button {
+  width: 48%;
+  padding: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #333;
+  cursor: pointer;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .signin .social-buttons button i {
+  font-size: 25px;
+}
+.card .signin .social-buttons button .google-logo {
+  width: 20px;
+  margin-right: 10px;
+}
+.card .signin .switch-page {
+  text-align: center;
+  margin-top: 30px;
+}
+.card .signin .switch-page a {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-left: 5px;
+}
+@media (max-width: 992px) {
+  .card {
+    width: 90%;
+    height: 550px;
+    gap: 30px;
+  }
+  .card .image {
+    width: 45%;
+  }
+  .card .signin {
+    flex: 1;
+    padding-right: 25px;
+  }
+  .card .image h1 {
+    font-size: 30px;
+  }
+  .card .image p {
+    font-size: 17px;
+  }
+  .card .signin > i {
+    transform: translate(250px, 30px) rotate(-40deg);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 30px 15px;
+  }
+  .card {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 30px;
+    gap: 0;
+  }
+  .card .image {
+    display: none;
+  }
+  .card .signin {
+    width: 100%;
+  }
+  .card .signin > i {
+    transform: none;
+    display: block;
+    text-align: right;
+    font-size: 35px;
+  }
+  .card .signin h2 {
+    font-size: 30px;
+  }
+  .card .signin p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+  .card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .card .signin h2 {
+    font-size: 26px;
+  }
+  .card .signin .input-group input {
+    height: 45px;
+    font-size: 14px;
+  }
+  .card .signin .input-group input::placeholder {
+    font-size: 14px;
+  }
+  .card .signin .form-options {
+    font-size: 12px;
+    gap: 10px;
+  }
+  .card .signin .social-buttons button {
+    font-size: 14px;
+  }
+  .card .signin .switch-page {
+    font-size: 13px;
+  }
+}

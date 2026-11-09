@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solvoya</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/hotels.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#">
+          <img
+            class="logo"
+            src="images/Solvoya Travel Compass Logo.png"
+            alt="Solvoya"
+          />
+        </a>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="hotels.html" class="active">Hotels</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+          </ul>
+        </nav>
+        <div class="actions">
+          <div class="search-box">
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search hotels..."
+            />
+          </div>
+          <a href="signin.html" class="signin-btn">Sign In</a>
+          <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="text">
+          <h1>Explore the World<br />With Solvoya</h1>
+          <p>
+            Discover amazing hotels and create<br />
+            memories with our travel solutions.
+          </p>
+        </div>
+      </div>
+      <form class="search-bar" id="hero-search">
+        <div class="search-field">
+          <label for="destination">Where to?</label>
+          <input
+            type="text"
+            id="destination"
+            name="destination"
+            placeholder="Search hotels..."
+            required
+          />
+        </div>
+        <div class="search-field">
+          <label for="checkin">Check in</label>
+          <input type="date" id="checkin" name="checkin" />
+        </div>
+        <div class="search-field">
+          <label for="checkout">Check out</label>
+          <input type="date" id="checkout" name="checkout" />
+        </div>
+        <div class="search-field">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5+ Guests</option>
+          </select>
+        </div>
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+    </section>
+    <div class="hotels">
+      <div class="container">
+        <aside class="filters">
+          <h3>Filter By</h3>
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <label>
+              <input type="checkbox" name="price" value="0-100" />
+              $0 - $100
+            </label>
+            <label>
+              <input type="checkbox" name="price" value="100-200" />
+              $100 - $200
+            </label>
+            <label>
+              <input type="checkbox" name="price" value="200-300" />
+              $200 - $300
+            </label>
+            <label>
+              <input type="checkbox" name="price" value="300+" />
+              $300+
+            </label>
+          </div>
+          <div class="filter-group">
+            <h4>Amenities</h4>
+            <label>
+              <input type="checkbox" name="amenity" value="wifi" />
+              Free WiFi
+            </label>
+            <label>
+              <input type="checkbox" name="amenity" value="pool" />
+              Pool
+            </label>
+            <label>
+              <input type="checkbox" name="amenity" value="gym" />
+              Gym
+            </label>
+            <label>
+              <input type="checkbox" name="amenity" value="restaurant" />
+              Restaurant
+            </label>
+            <label>
+              <input type="checkbox" name="amenity" value="spa" />
+              Spa
+            </label>
+            <label>
+              <input type="checkbox" name="amenity" value="beach" />
+              Beach Access
+            </label>
+          </div>
+          <div class="filter-group">
+            <h4>Star Rating</h4>
+            <label>
+              <input type="checkbox" name="rating" value="4" />
+              <span class="stars">★★★★</span>
+              <span>4 & Up</span>
+            </label>
+            <label>
+              <input type="checkbox" name="rating" value="3" />
+              <span class="stars">★★★</span>
+              <span>3 & Up</span>
+            </label>
+            <label>
+              <input type="checkbox" name="rating" value="2" />
+              <span class="stars">★★</span>
+              <span>2 & Up</span>
+            </label>
+          </div>
+        </aside>
+        <section class="hotels-grid">
+          <div
+            class="box"
+            data-price="180"
+            data-rating="4.8"
+            data-amenities="pool spa restaurant wifi"
+            data-id="the-mulia-bali"
+          >
+            <div class="image">
+              <img src="images/hotels-01.jpg" alt="" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="box-content">
+              <h3>The Mulia Bali</h3>
+              <p>Bali, Indonesia</p>
+              <span class="rating"
+                ><i class="fa-solid fa-star"></i>
+                <span class="rating-number">4.8</span>
+              </span>
+              <ul class="hotel-box-amenities">
+                <li>Pool</li>
+                <li>Spa</li>
+                <li>Restaurant</li>
+                <li>WiFi</li>
+              </ul>
+            </div>
+            <div class="hotel-box-booking">
+              <p class="hotel-box-price">$180 <span>/ night</span></p>
+              <button class="hotel-box-btn">Book Now</button>
+            </div>
+          </div>
+          <div
+            class="box"
+            data-price="220"
+            data-rating="4.7"
+            data-amenities="wifi gym restaurant spa"
+            data-id="hotel-de-paris"
+          >
+            <div class="image">
+              <img src="images/hotels-02.jpg" alt="" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="box-content">
+              <h3>Hotel de Paris</h3>
+              <p>Paris, France</p>
+              <span class="rating"
+                ><i class="fa-solid fa-star"></i>
+                <span class="rating-number">4.7</span>
+              </span>
+              <ul class="hotel-box-amenities">
+                <li>Wifi</li>
+                <li>Gym</li>
+                <li>Restaurant</li>
+                <li>Spa</li>
+              </ul>
+            </div>
+            <div class="hotel-box-booking">
+              <p class="hotel-box-price">$220 <span>/ night</span></p>
+              <button class="hotel-box-btn">Book Now</button>
+            </div>
+          </div>
+          <div
+            class="box"
+            data-price="350"
+            data-rating="4.9"
+            data-amenities="pool wifi restaurant spa"
+            data-id="canavas-oia-suites"
+          >
+            <div class="image">
+              <img src="images/hotels-03.jpg" alt="" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="box-content">
+              <h3>Canaves Oia Suites</h3>
+              <p>Santorini, Greece</p>
+              <span class="rating"
+                ><i class="fa-solid fa-star"></i>
+                <span class="rating-number">4.9</span>
+              </span>
+              <ul class="hotel-box-amenities">
+                <li>Pool</li>
+                <li>Wifi</li>
+                <li>Restaurant</li>
+                <li>Spa</li>
+              </ul>
+            </div>
+            <div class="hotel-box-booking">
+              <p class="hotel-box-price">$350 <span>/ night</span></p>
+              <button class="hotel-box-btn">Book Now</button>
+            </div>
+          </div>
+          <div
+            class="box"
+            data-price="280"
+            data-rating="4.6"
+            data-amenities="pool gym restaurant spa"
+            data-id="the-plaza-hotel"
+          >
+            <div class="image">
+              <img src="images/hotels-04.jpg" alt="" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="box-content">
+              <h3>The Plaza Hotel</h3>
+              <p>New York, USA</p>
+              <span class="rating"
+                ><i class="fa-solid fa-star"></i>
+                <span class="rating-number">4.6</span>
+              </span>
+              <ul class="hotel-box-amenities">
+                <li>Pool</li>
+                <li>Gym</li>
+                <li>Restaurant</li>
+                <li>Spa</li>
+              </ul>
+            </div>
+            <div class="hotel-box-booking">
+              <p class="hotel-box-price">$280 <span>/ night</span></p>
+              <button class="hotel-box-btn">Book Now</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/hotels.js"></script>
+  </body>
+</html>

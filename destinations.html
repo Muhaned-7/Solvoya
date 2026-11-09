@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solvoya</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/destinations.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#">
+          <img
+            class="logo"
+            src="images/Solvoya Travel Compass Logo.png"
+            alt="Solvoya"
+          />
+        </a>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+          </ul>
+        </nav>
+        <div class="actions">
+          <div class="search-box">
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search destinations..."
+            />
+          </div>
+          <a href="signin.html" class="signin-btn">Sign In</a>
+          <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="text">
+          <h1>Discover Amazing Destinations</h1>
+          <p>
+            Find your next adventure, from tropical beaches to historic cities.
+          </p>
+        </div>
+        <form class="search-form">
+          <div class="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Search destinations..."
+              id="destination-search"
+            />
+          </div>
+          <div class="filter-box">
+            <select name="country">
+              <option value="" selected>All Countries</option>
+              <option value="indonesia">Indonesia</option>
+              <option value="france">France</option>
+              <option value="greece">Greece</option>
+              <option value="usa">USA</option>
+              <option value="japan">Japan</option>
+              <option value="uae">UAE</option>
+              <option value="italy">Italy</option>
+              <option value="australia">Australia</option>
+              <option value="spain">Spain</option>
+            </select>
+          </div>
+          <div class="filter-box">
+            <select name="type">
+              <option value="" selected>All Types</option>
+              <option value="beach">Beach</option>
+              <option value="city">City</option>
+              <option value="mountains">Mountains</option>
+              <option value="adventure">Adventure</option>
+              <option value="culture">Culture</option>
+            </select>
+          </div>
+          <div class="filter-box">
+            <select name="season">
+              <option value="" selected>All Seasons</option>
+              <option value="summer">Summer</option>
+              <option value="winter">Winter</option>
+              <option value="spring">Spring</option>
+              <option value="autumn">Autumn</option>
+            </select>
+          </div>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+    <section class="destinations">
+      <div class="container">
+        <aside class="filters">
+          <h3>Filter By</h3>
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <label>
+              <input type="checkbox" name="price" value="0-500" />
+              $0 - $500
+            </label>
+            <label>
+              <input type="checkbox" name="price" value="500-1000" />
+              $500 - $1,000
+            </label>
+            <label>
+              <input type="checkbox" name="price" value="1000-2000" />
+              $1,000 - $2,000
+            </label>
+            <label>
+              <input type="checkbox" name="price" value="2000+" />
+              $2,000+
+            </label>
+          </div>
+          <div class="filter-group">
+            <h4>Destination Type</h4>
+            <label>
+              <input type="checkbox" name="type" value="beach" />
+              Beach
+            </label>
+            <label>
+              <input type="checkbox" name="type" value="city" />
+              City
+            </label>
+            <label>
+              <input type="checkbox" name="type" value="mountains" />
+              Mountains
+            </label>
+            <label>
+              <input type="checkbox" name="type" value="adventure" />
+              Adventure
+            </label>
+            <label>
+              <input type="checkbox" name="type" value="culture" />
+              Culture
+            </label>
+          </div>
+          <div class="filter-group">
+            <h4>Rating</h4>
+            <label>
+              <input type="checkbox" name="rating" value="4" />
+              <span class="stars">★★★★</span>
+              <span>4 & Up</span>
+            </label>
+            <label>
+              <input type="checkbox" name="rating" value="3" />
+              <span class="stars">★★★</span>
+              <span>3 & Up</span>
+            </label>
+            <label>
+              <input type="checkbox" name="rating" value="2" />
+              <span class="stars">★★</span>
+              <span>2 & Up</span>
+            </label>
+          </div>
+        </aside>
+        <section class="destinations-grid">
+          <a
+            href="#"
+            class="card"
+            data-name="Bali"
+            data-country="indonesia"
+            data-price="800"
+            data-rating="4.8"
+            data-type="beach"
+            data-season="summer"
+            data-id="bali"
+          >
+            <div class="image">
+              <img src="images/destination-01.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Bali</h3>
+              <p>Indonesia</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.8</span>
+                </span>
+                <span class="price">From $800</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-country="france"
+            data-name="Paris"
+            data-price="1200"
+            data-rating="4.7"
+            data-type="city"
+            data-season="spring"
+            data-id="paris"
+          >
+            <div class="image">
+              <img src="images/destination-02.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Paris</h3>
+              <p>France</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.7</span>
+                </span>
+                <span class="price">From $1,200</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-name="Santorini"
+            data-country="greece"
+            data-price="1000"
+            data-rating="4.9"
+            data-type="beach"
+            data-season="summer"
+            data-id="santorini"
+          >
+            <div class="image">
+              <img src="images/destination-03.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Santorini</h3>
+              <p>Greece</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.9</span>
+                </span>
+                <span class="price">From $1,000</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-name="New York"
+            data-country="usa"
+            data-price="1500"
+            data-rating="4.6"
+            data-type="city"
+            data-season="autumn"
+            data-id="new-york"
+          >
+            <div class="image">
+              <img src="images/destination-04.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>New York</h3>
+              <p>USA</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.6</span>
+                </span>
+                <span class="price">From $1,500</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-name="Tokyo"
+            data-country="japan"
+            data-price="1300"
+            data-rating="4.5"
+            data-type="culture"
+            data-season="spring"
+            data-id="tokyo"
+          >
+            <div class="image">
+              <img src="images/destination-05.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Tokyo</h3>
+              <p>Japan</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.5</span>
+                </span>
+                <span class="price">From $1,300</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-name="Dubai"
+            data-country="uae"
+            data-price="1100"
+            data-rating="4.7"
+            data-type="adventure"
+            data-season="winter"
+            data-id="dubai"
+          >
+            <div class="image">
+              <img src="images/destination-06.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Dubai</h3>
+              <p>UAE</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.7</span>
+                </span>
+                <span class="price">From $1,100</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-name="Rome"
+            data-country="italy"
+            data-price="1200"
+            data-rating="4.6"
+            data-type="culture"
+            data-season="spring"
+            data-id="rome"
+          >
+            <div class="image">
+              <img src="images/destination-07.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Rome</h3>
+              <p>Italy</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.6</span>
+                </span>
+                <span class="price">From $1,200</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-name="Sydney"
+            data-country="australia"
+            data-price="1400"
+            data-rating="4.4"
+            data-type="beach"
+            data-season="summer"
+            data-id="sydney"
+          >
+            <div class="image">
+              <img src="images/destination-08.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Sydney</h3>
+              <p>Australia</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.4</span>
+                </span>
+                <span class="price">From $1,400</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="card"
+            data-name="Barcelona"
+            data-country="spain"
+            data-price="1000"
+            data-rating="4.5"
+            data-type="city"
+            data-season="summer"
+            data-id="barcelona"
+          >
+            <div class="image">
+              <img src="images/destination-09.jpg" alt="Dubai" />
+              <button type="button" class="favorite-btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <div class="card-content">
+              <h3>Barcelona</h3>
+              <p>Spain</p>
+              <div class="card-info">
+                <span class="rating"
+                  ><i class="fa-solid fa-star"></i>
+                  <span class="rating-number">4.5</span>
+                </span>
+                <span class="price">From $1,000</span>
+              </div>
+            </div>
+          </a>
+        </section>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+    <script src="js/destinations.js"></script>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #dbeafe;
+  --secondary-color: #1e2a5e;
+  --text-color: #64748b;
+  --background-color: #f8fafc;
+  --section-padding-top: 50px;
+  --section-padding-bottom: 50px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.header {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.header .container {
+  width: 90%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(123, 132, 145, 0.4);
+  border-radius: 70px;
+}
+.header .container .logo {
+  width: 200px;
+}
+.header .container .nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header .container .nav-links ul a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.header .container .nav-links ul a.active {
+  color: var(--secondary-color);
+}
+.header .container .nav-links ul a:hover {
+  color: var(--secondary-color);
+}
+.nav-links ul:hover a.active:not(:hover) {
+  color: white;
+}
+.header .container .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .container .actions .signin-btn,
+.header .container .actions .signup-btn {
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: white;
+  box-shadow: 0 0 10px 2px rgba(59, 130, 255, 0.85);
+  margin-left: 10px;
+}
+@media (max-width: 992px) {
+  .header .container {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .header .container .actions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .header .container .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.hero {
+  background-image: url("../images/favorites-section.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 100px);
+  position: relative;
+}
+.hero .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+.hero .text h1 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 500;
+}
+@media (max-width: 576px) {
+  .hero .text h1 {
+    font-size: 40px;
+  }
+  .hero .text {
+    margin-top: 50px;
+  }
+}
+.hero .text p {
+  margin-top: 30px;
+}
+.favorites-section {
+  padding: 35px 0 70px;
+  background-color: #fff;
+}
+
+.favorites-tabs {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+}
+
+.favorites-tabs .tab-btn {
+  background: none;
+  border: none;
+  padding: 15px 20px;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.favorites-tabs .tab-btn.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.favorites-panel {
+  display: none;
+}
+
+.favorites-panel.active {
+  display: block;
+}
+
+.destinations-grid,
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px 30px;
+}
+
+.destinations-grid .card,
+.hotels-grid .box {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.destinations-grid .card:hover,
+.hotels-grid .box:hover {
+  transform: translateY(-5px);
+}
+
+.destinations-grid .card img,
+.hotels-grid .box img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.destinations-grid .card-content,
+.hotels-grid .box-content {
+  padding: 12px 15px 15px;
+}
+
+.destinations-grid .card-content h3,
+.hotels-grid .box-content h3 {
+  color: var(--secondary-color);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.destinations-grid .card-content p,
+.hotels-grid .box-content p {
+  color: var(--text-color);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.destinations-grid .rating,
+.hotels-grid .rating {
+  color: #f59e0b;
+  font-size: 13px;
+}
+.hotels-grid .box {
+  display: block;
+  padding: 0;
+}
+
+.hotels-grid .hotel-box-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.hotels-grid .hotel-box-booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 0 15px 10px;
+}
+
+.hotels-grid .hotel-box-price {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.hotels-grid .hotel-box-price span {
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.hotels-grid .hotel-box-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .destinations-grid,
+  .hotels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-tabs {
+    gap: 15px;
+  }
+}
+.favorite-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.favorite-btn i {
+  color: #64748b;
+  font-size: 18px;
+}
+
+.favorite-btn.active i {
+  color: #e63946;
+}
