@@ -1,13 +1,15 @@
 let searchBtn = document.querySelector(".search-box .search-btn");
 let headerSearchInput = document.querySelector(".search-box .search-input");
 
-if (searchBtn && headerSearchInput) {
+let isHotelsPage = window.location.pathname.endsWith("hotels.html");
+
+if (searchBtn && headerSearchInput && !isHotelsPage) {
   function goToSearch() {
     let searchValue = headerSearchInput.value.trim();
 
     if (searchValue !== "") {
       window.location.href = `destinations.html?search=${encodeURIComponent(
-        searchValue,
+        searchValue
       )}`;
     }
   }
@@ -32,9 +34,11 @@ if (searchBtn && headerSearchInput) {
   });
 }
 
+
+
 let heroSearch = document.querySelector("#hero-search");
 
-if (heroSearch) {
+if (heroSearch && !isHotelsPage) {
   heroSearch.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -53,6 +57,8 @@ if (heroSearch) {
     window.location.href = `destinations.html?${params.toString()}`;
   });
 }
+
+
 
 let favoriteBtns = document.querySelectorAll(".favorite-btn");
 
@@ -98,28 +104,35 @@ favoriteBtns.forEach((btn) => {
 });
 
 
+
 let password = document.getElementById("password");
 let togglePassword = document.getElementById("togglePassword");
 
-togglePassword.addEventListener("click", function () {
-  if (password.type === "password") {
-    password.type = "text";
-    togglePassword.classList.replace("fa-eye", "fa-eye-slash");
-  } else {
-    password.type = "password";
-    togglePassword.classList.replace("fa-eye-slash", "fa-eye");
-  }
-});
+if (password && togglePassword) {
+  togglePassword.addEventListener("click", function () {
+    if (password.type === "password") {
+      password.type = "text";
+      togglePassword.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+      password.type = "password";
+      togglePassword.classList.replace("fa-eye-slash", "fa-eye");
+    }
+  });
+}
+
+
 
 let confirmPassword = document.getElementById("confirmPassword");
 let toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
 
-toggleConfirmPassword.addEventListener("click", function () {
-  if (confirmPassword.type === "password") {
-    confirmPassword.type = "text";
-    toggleConfirmPassword.classList.replace("fa-eye", "fa-eye-slash");
-  } else {
-    confirmPassword.type = "password";
-    toggleConfirmPassword.classList.replace("fa-eye-slash", "fa-eye");
-  }
-});
+if (confirmPassword && toggleConfirmPassword) {
+  toggleConfirmPassword.addEventListener("click", function () {
+    if (confirmPassword.type === "password") {
+      confirmPassword.type = "text";
+      toggleConfirmPassword.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+      confirmPassword.type = "password";
+      toggleConfirmPassword.classList.replace("fa-eye-slash", "fa-eye");
+    }
+  });
+}
