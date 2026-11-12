@@ -153,8 +153,14 @@ a {
 }
 @media (max-width: 576px) {
   .header .container .nav-links ul {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .header .container .nav-links ul a {
+    font-size: 13px;
   }
 }
 .hero {
@@ -178,11 +184,16 @@ a {
   font-weight: 500;
 }
 @media (max-width: 576px) {
-  .hero .text h1 {
-    font-size: 40px;
-  }
   .hero .text {
-    margin-top: 50px;
+    margin-top: 20px;
+    top: 42%;
+  }
+  .hero .text h1 {
+    font-size: 36px;
+  }
+  .hero .text p {
+    font-size: 13px;
+    margin-top: 15px;
   }
 }
 .hero .text p {
@@ -203,6 +214,28 @@ a {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+.hero .search-bar .search-field {
+  min-width: 0;
+}
+.hero .search-bar .search-field input,
+.hero .search-bar .search-field select {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 7px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+.hero .search-bar .search-btn {
+  width: 150px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
 @media (max-width: 992px) {
   .hero .search-bar {
     flex-wrap: wrap;
@@ -219,37 +252,22 @@ a {
 @media (max-width: 576px) {
   .hero .search-bar {
     flex-direction: column;
+    align-items: stretch;
     gap: 20px;
     bottom: -50px;
-    text-align: center;
+    text-align: left;
+    width: 90%;
+    padding: 20px;
   }
   .hero .search-field {
     flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
   }
   .hero .search-btn {
+    width: 100%;
     flex: 1 1 100%;
   }
-}
-.hero .search-bar .search-field input {
-  margin-top: 7px;
-  padding: 7px;
-  border-radius: 50px;
-  border: 1px solid #333;
-}
-.hero .search-bar .search-field select {
-  margin-top: 7px;
-  padding: 7px;
-  border-radius: 10px;
-}
-.hero .search-bar .search-btn {
-  width: 150px;
-  padding: 15px 10px;
-  border: none;
-  border-radius: 20px;
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
 }
 .hotels {
   padding-top: calc(var(--section-padding-top) + 50px);
