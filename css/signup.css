@@ -36,7 +36,7 @@ a {
 }
 .card .image {
   width: 50%;
-  background-image: url(../images/signin-img.jpg);
+  background-image: url(../images/signup-img.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
